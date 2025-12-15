@@ -1,1 +1,173 @@
-/*# sourceMappingURL=style.css.map */
+html {
+  background-color: #3DFF87;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: "Space Grotesk", sans-serif;
+  color: #151B21;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2vh 12vw 2vh 12vw;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 96px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h3 {
+    font-size: 48px;
+  }
+  h4 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+.anchor-center {
+  text-align: center;
+}
+
+.anchor-end {
+  text-align: end;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1280px) {
+  #landing div {
+    max-width: 1000px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #landing div {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #landing div {
+    max-width: 400px;
+  }
+}
+
+header {
+  min-height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 5vw 10px 5vw;
+}
+header img {
+  height: 2.5rem;
+  margin: 1rem;
+}
+header nav {
+  box-sizing: border-box;
+}
+header nav ul {
+  justify-content: center;
+  margin: 0;
+}
+header nav ul li a {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #151B21;
+  color: #FAFAFA;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin-left: 2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
+header nav ul li a:hover {
+  background-color: #222222;
+  transition: all 0.1s ease;
+}
+header nav ul li a:active {
+  text-decoration: underline;
+  transition: all 0.1s ease;
+}
+
+footer {
+  min-height: 50px;
+  background-color: #151B21;
+  color: #FAFAFA;
+}
+footer p {
+  text-align: center;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

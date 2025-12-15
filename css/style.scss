@@ -1,0 +1,229 @@
+// --------------------------------------- VARIABLES ---------------------------------------
+
+$black: #0F0F0F;
+$black_desat: #151B21;
+$grey_dark: #333333;
+$grey: #666666;
+$grey_light: #999999;
+$white: #FAFAFA;
+
+$green_bright_mint: #3DFF87;
+
+// --------------------------------------- LAYOUT ---------------------------------------
+
+html {
+    background-color: $green_bright_mint;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: "Space Grotesk", sans-serif;
+    color: $black_desat;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2vh 12vw 2vh 12vw;
+}
+
+// WIP - for dynamic layout
+
+@media screen and (min-width: 1280px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {}
+
+@media screen and (max-width: 767px) {}
+
+// --------------------------------------- FONT SIZES ---------------------------------------
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 96px;
+    }
+
+    h2 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-size: 48px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+// --------------------------------------- TEXT ANCHORS ---------------------------------------
+
+.anchor-center {
+    text-align: center;
+}
+
+.anchor-end {
+    text-align: end;
+}
+
+// --------------------------------------- FLEXBOX ---------------------------------------
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+}
+
+// --------------------------------------- ELEMENTS ---------------------------------------
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#landing {
+    div {
+        @media screen and (min-width: 1280px) {
+            max-width: 1000px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            max-width: 700px;
+        }
+
+        @media screen and (max-width: 767px) {
+            max-width: 400px;
+        }
+    }
+}
+
+header {
+    min-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 5vw 10px 5vw;
+
+    img {
+        height: 2.5rem;
+        margin: 1rem;
+    }
+
+    nav {
+        box-sizing: border-box;
+
+        ul {
+            justify-content: center;
+            margin: 0;
+        
+            li {
+        
+                a {
+                    cursor: pointer;
+                    display: inline-block;
+                    background-color: $black_desat;
+                    color: $white;
+                    padding: 1rem 1.5rem 1rem 1.5rem;
+                    margin-left: 2rem;
+                    border-radius: 4px;
+                    font-weight: bold;
+                    transition: all 0.1s ease;
+        
+                    &:hover {
+                        background-color: #222222;
+                        transition: all 0.1s ease;
+                    }
+
+                    &:active {
+                        text-decoration: underline;
+                        transition: all 0.1s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    min-height: 50px;
+    background-color: $black_desat;
+    color: $white;
+
+    p {
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+// --------------------------------------- OVERLAY ---------------------------------------
