@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,62 @@
 
     <link rel="icon" type="image/png" href="media/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="js/script.js"></script>
 </head>
+
 <body>
     <header class="flex row">
         <img src="media/logo-icon.svg" alt="mon logo">
-        <nav>
+        <nav class="desktop-nav">
             <ul class="flex">
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="index.html#skills">Compétences</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
                 <li><a href="https://linktr.ee/antonin.thomas">Linktr.ee</a></li>
             </ul>
         </nav>
+        <button class="burger-btn" aria-label="Ouvrir le menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
+
+    <nav class="mobile-nav">
+        <ul>
+            <li><a class="nav-link" href="index.html#about">À propos</a></li>
+            <li><a class="nav-link" href="index.html#skills">Compétences</a></li>
+            <li><a class="nav-link" href="index.html#projects">Projets</a></li>
+            <li><a class="nav-link" href="https://linktr.ee/antonin.thomas">Linktr.ee</a></li>
+        </ul>
+    </nav>
 
     <main class="layout">
         <div id="landing">
             <div>
-                <h1>MON PORTFOLIO</h1>
-                <h2 class="anchor-end">Antonin THOMAS</h2>
+                <h1>PORTFOLIO</h1>
+                <h2>Antonin THOMAS</h2>
             </div>
             <p>[Ce site est actuellement en construction, revenez plus tard !]</p>
+        </div>
+
+        <div id="about">
+            <h2>À propos de moi</h2>
+            <p>[Cette section est vide, revenez plus tard !]</p>
+        </div>
+
+        <div id="skills">
+            <h2>Mes compétences</h2>
+            <p>[Cette section est vide, revenez plus tard !]</p>
+        </div>
+
+        <div id="projects">
+            <h2>Mes projets</h2>
+            <p>[Cette section est vide, revenez plus tard !]</p>
         </div>
     </main>
 
@@ -33,4 +71,5 @@
         <p>© 2025 Antonin THOMAS</p>
     </footer>
 </body>
+
 </html>
