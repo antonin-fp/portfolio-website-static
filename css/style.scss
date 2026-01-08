@@ -1,18 +1,18 @@
 // --------------------------------------- VARIABLES ---------------------------------------
 
 $black: #0F0F0F;
-$black_desat: #151B21;
+$black_desat: #151b21;
 $grey_dark: #333333;
 $grey: #666666;
 $grey_light: #999999;
-$white: #FAFAFA;
+$white: #FBFBFB;
 
-$green_bright_mint: #3DFF87;
+$green_bright_mint: #3dff87;
 
 // --------------------------------------- LAYOUT ---------------------------------------
 
 html {
-    background-color: $green_bright_mint;
+    background-color: $black_desat;
 }
 
 body {
@@ -20,18 +20,24 @@ body {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(32px, 1fr) minmax(0, 1280px) minmax(32px, 1fr);
     font-family: "Space Grotesk", sans-serif;
-    color: $black_desat;
+    color: $white;
 }
 
-.layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 2vh 12vw 2vh 12vw;
+header, main, footer {
+    grid-column: 2;
 }
 
 // --------------------------------------- FONT SIZES ---------------------------------------
+
+h1 {
+    color: $green_bright_mint;
+}
+
+h2 {
+    color: $green_bright_mint;
+}
 
 @media screen and (min-width: 1280px) {
     h1 {
@@ -138,16 +144,18 @@ a {
 }
 
 #landing {
-    height: 80vh;
+    margin: 8vh 0 8vh 0;
 
     div {
+        container-type: inline-size;
         h1 {
-            margin-bottom: 0;
+            font-size: 18cqw;
+            margin: 0;
         }
 
         h2 {
+            color: $white;
             margin-top: 0;
-            margin-left: 48px;
         }
     }
 }
@@ -157,12 +165,17 @@ header {
     min-height: 48px;
     justify-content: space-between;
     align-items: center;
-    margin: 16px 5vw 16px 5vw;
+    margin-top: 24px;
     z-index: 1001;
 
-    img {
-        height: 48px;
+    > a {
+        display: flex;
+        justify-items: center;
         margin-right: 1rem;
+
+        img {
+            height: 48px;
+        }
     }
 
     nav {
@@ -177,22 +190,23 @@ header {
                 a {
                     cursor: pointer;
                     display: inline-block;
-                    background-color: $black_desat;
+                    background-color: rgb(251, 251, 251, 0.08);
                     color: $white;
-                    padding: 1rem 1.5rem 1rem 1.5rem;
-                    margin-left: 2rem;
+                    padding: 16px 24px 16px 24px;
+                    margin-left: 1rem;
                     border-radius: 4px;
                     font-weight: bold;
-                    transition: all 0.1s ease;
+                    transition: all 0.4s ease;
 
                     &:hover {
-                        background-color: #222222;
-                        transition: all 0.1s ease;
+                        background-color: $green_bright_mint;
+                        color: $black_desat;
+                        transition: all 0.4s ease;
                     }
 
                     &:active {
                         text-decoration: underline;
-                        transition: all 0.1s ease;
+                        transition: all 0.4s ease;
                     }
                 }
             }
@@ -201,9 +215,8 @@ header {
 }
 
 footer {
-    min-height: 50px;
-    background-color: $black_desat;
-    color: $white;
+    min-height: 48px;
+    margin-top: 48px;
 
     p {
         text-align: center;
@@ -234,10 +247,10 @@ footer {
     padding: 16px;
     border-radius: 4px;
 
-    background-color: $black_desat;
+    background-color: $green_bright_mint;
 
     .bar {
-        background-color: $white;
+        background-color: $black_desat;
     }
 
     @media screen and (min-width: 980px) {
@@ -295,7 +308,7 @@ footer {
         a {
             display: block;
             font-size: 1.8rem;
-            color: $white;
+            color: $green_bright_mint;
             text-decoration: none;
             margin: 25px 0;
             transition: color 0.3s;
