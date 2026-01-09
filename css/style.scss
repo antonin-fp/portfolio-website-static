@@ -53,7 +53,7 @@ h2 {
     }
 
     h4 {
-        font-size: 32px;
+        font-size: 24px;
     }
 
     p {
@@ -75,7 +75,7 @@ h2 {
     }
 
     h4 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     p {
@@ -97,7 +97,7 @@ h2 {
     }
 
     h4 {
-        font-size: 26px;
+        font-size: 16px;
     }
 
     p {
@@ -127,10 +127,6 @@ h2 {
 
 .column {
     flex-direction: column;
-}
-
-.center {
-    justify-content: center;
 }
 
 // --------------------------------------- ELEMENTS ---------------------------------------
@@ -217,10 +213,84 @@ header {
 footer {
     min-height: 48px;
     margin-top: 48px;
+    padding: 16px 0px 16px 0px;
+    border-top: 1px solid $grey_light;
 
-    p {
-        text-align: center;
-        font-weight: bold;
+    @media screen and (max-width: 767px) {
+        font-size: 12px;
+    }
+
+
+    > div {
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        > div:nth-child(-n + 1) {
+
+            > div:nth-child(-n + 1) {
+                margin-right: 48px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin-bottom: 16px;
+
+                    span {
+                        color: $green_bright_mint;
+                        font-weight: bold;
+                    }
+
+                    a {
+                        color: $white;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        
+                    }
+                }
+            }
+        }
+
+        > div:nth-child(even) {
+            height: 100%;
+
+            @media screen and (min-width: 768px) {
+                align-items: end;
+                justify-content: space-between;
+            }
+
+            @media screen and (max-width: 767px) {
+                margin-top: 16px;
+            }
+
+            > div:nth-child(-n + 1) {
+                @media screen and (min-width: 768px) {
+                    align-items: end;
+                }
+
+                > span {
+                    margin-bottom: 8px;
+                }
+            }
+
+            > span {
+                color: $grey_light;
+            }
+        }
     }
 }
 

@@ -35,7 +35,7 @@ h2 {
     font-size: 48px;
   }
   h4 {
-    font-size: 32px;
+    font-size: 24px;
   }
   p {
     font-size: 16px;
@@ -52,7 +52,7 @@ h2 {
     font-size: 36px;
   }
   h4 {
-    font-size: 24px;
+    font-size: 20px;
   }
   p {
     font-size: 16px;
@@ -69,7 +69,7 @@ h2 {
     font-size: 20px;
   }
   h4 {
-    font-size: 26px;
+    font-size: 16px;
   }
   p {
     font-size: 12px;
@@ -93,10 +93,6 @@ h2 {
 
 .column {
   flex-direction: column;
-}
-
-.center {
-  justify-content: center;
 }
 
 ul {
@@ -168,10 +164,73 @@ header nav ul li a:active {
 footer {
   min-height: 48px;
   margin-top: 48px;
+  padding: 16px 0px 16px 0px;
+  border-top: 1px solid #999999;
 }
-footer p {
-  text-align: center;
+@media screen and (max-width: 767px) {
+  footer {
+    font-size: 12px;
+  }
+}
+footer > div {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  footer > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer > div {
+    flex-direction: column;
+  }
+}
+footer > div > div:nth-child(-n+1) > div:nth-child(-n+1) {
+  margin-right: 48px;
+}
+footer > div > div:nth-child(-n+1) ul {
+  margin: 0;
+  padding: 0;
+}
+footer > div > div:nth-child(-n+1) ul li {
+  margin-bottom: 16px;
+}
+footer > div > div:nth-child(-n+1) ul li span {
+  color: #3dff87;
   font-weight: bold;
+}
+footer > div > div:nth-child(-n+1) ul li a {
+  color: #FBFBFB;
+}
+footer > div > div:nth-child(-n+1) ul li a:hover {
+  text-decoration: underline;
+}
+footer > div > div:nth-child(even) {
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  footer > div > div:nth-child(even) {
+    align-items: end;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer > div > div:nth-child(even) {
+    margin-top: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer > div > div:nth-child(even) > div:nth-child(-n+1) {
+    align-items: end;
+  }
+}
+footer > div > div:nth-child(even) > div:nth-child(-n+1) > span {
+  margin-bottom: 8px;
+}
+footer > div > div:nth-child(even) > span {
+  color: #999999;
 }
 
 @media screen and (max-width: 980px) {
