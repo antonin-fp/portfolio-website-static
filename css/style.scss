@@ -29,7 +29,9 @@ body {
     color: $white;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     grid-column: 2;
 }
 
@@ -158,7 +160,7 @@ a {
     height: 80vh;
 
     div {
-        
+
         h1 {
             font-size: 18cqw;
             margin: 0;
@@ -185,7 +187,7 @@ header {
     padding: 24px 0 24px 0;
     // border-bottom: 1px solid $grey_light;
 
-    > a {
+    >a {
         display: flex;
         justify-items: center;
         margin-right: 1rem;
@@ -253,7 +255,7 @@ footer {
     }
 
 
-    > div {
+    >div {
         width: 100%;
 
         @media screen and (min-width: 768px) {
@@ -266,9 +268,9 @@ footer {
             flex-direction: column;
         }
 
-        > div:nth-child(-n + 1) {
+        >div:nth-child(-n + 1) {
 
-            > div:nth-child(-n + 1) {
+            >div:nth-child(-n + 1) {
                 margin-right: 48px;
             }
 
@@ -291,13 +293,13 @@ footer {
                             text-decoration: underline;
                         }
 
-                        
+
                     }
                 }
             }
         }
 
-        > div:nth-child(even) {
+        >div:nth-child(even) {
             height: 100%;
 
             @media screen and (min-width: 768px) {
@@ -309,17 +311,17 @@ footer {
                 margin-top: 16px;
             }
 
-            > div:nth-child(-n + 1) {
+            >div:nth-child(-n + 1) {
                 @media screen and (min-width: 768px) {
                     align-items: end;
                 }
 
-                > span {
+                >span {
                     margin-bottom: 8px;
                 }
             }
 
-            > span {
+            >span {
                 color: $grey_light;
             }
         }
@@ -409,16 +411,40 @@ footer {
         text-align: center;
         padding: 0;
 
-        a {
-            display: block;
-            font-size: 1.8rem;
-            color: $green_bright_mint;
-            text-decoration: none;
-            margin: 25px 0;
-            transition: color 0.3s;
+        li {
 
-            &:hover {
-                text-decoration: underline;
+            a {
+                cursor: pointer;
+                display: inline-block;
+                padding: 16px 24px 16px 24px;
+                margin-bottom: 24px;
+                border-radius: 4px;
+                color: $white;
+                font-size: 120%;
+                font-weight: bold;
+                transition: all 0.4s ease;
+
+                &:hover {
+                    // box-shadow: 0px 0px 4px 4px rgb(61, 255, 135, 0.4);
+                    background-color: rgb(251, 251, 251, 0.08);
+                    transition: all 0.4s ease;
+                }
+
+                &:active {
+                    text-decoration: underline;
+                    transition: all 0.4s ease;
+                }
+
+                &.highlight {
+                    color: $black_desat;
+                    background-color: $green_bright_mint;
+                    transition: all 0.4s ease;
+
+                    &:hover {
+                        background-color: rgb(61, 255, 135, 0.64);
+                        transition: all 0.4s ease;
+                    }
+                }
             }
         }
     }

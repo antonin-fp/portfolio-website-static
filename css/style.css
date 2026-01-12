@@ -12,7 +12,9 @@ body {
   color: #FBFBFB;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   grid-column: 2;
 }
 
@@ -316,14 +318,31 @@ footer > div > div:nth-child(even) > span {
   text-align: center;
   padding: 0;
 }
-.mobile-nav ul a {
-  display: block;
-  font-size: 1.8rem;
-  color: #3dff87;
-  text-decoration: none;
-  margin: 25px 0;
-  transition: color 0.3s;
+.mobile-nav ul li a {
+  cursor: pointer;
+  display: inline-block;
+  padding: 16px 24px 16px 24px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  color: #FBFBFB;
+  font-size: 120%;
+  font-weight: bold;
+  transition: all 0.4s ease;
 }
-.mobile-nav ul a:hover {
+.mobile-nav ul li a:hover {
+  background-color: rgba(251, 251, 251, 0.08);
+  transition: all 0.4s ease;
+}
+.mobile-nav ul li a:active {
   text-decoration: underline;
+  transition: all 0.4s ease;
+}
+.mobile-nav ul li a.highlight {
+  color: #151b21;
+  background-color: #3dff87;
+  transition: all 0.4s ease;
+}
+.mobile-nav ul li a.highlight:hover {
+  background-color: rgba(61, 255, 135, 0.64);
+  transition: all 0.4s ease;
 }/*# sourceMappingURL=style.css.map */
