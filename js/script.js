@@ -1,3 +1,7 @@
+// ====================
+// Burger menu
+// ====================
+
 document.addEventListener('DOMContentLoaded', () => {
     const burgerBtn = document.querySelector('.burger-btn');
     const mobileNav = document.querySelector('.mobile-nav');
@@ -27,3 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// ====================
+// Animation
+// ====================

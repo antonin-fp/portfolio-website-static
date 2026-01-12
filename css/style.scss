@@ -1,4 +1,6 @@
-// --------------------------------------- VARIABLES ---------------------------------------
+// ================================================================
+// ------------------------ VARIABLES
+// ================================================================
 
 $black: #0F0F0F;
 $black_desat: #151b21;
@@ -9,7 +11,9 @@ $white: #FBFBFB;
 
 $green_bright_mint: #3dff87;
 
-// --------------------------------------- LAYOUT ---------------------------------------
+// ================================================================
+// ------------------------ LAYOUT
+// ================================================================
 
 html {
     background-color: $black_desat;
@@ -29,7 +33,9 @@ header, main, footer {
     grid-column: 2;
 }
 
-// --------------------------------------- FONT SIZES ---------------------------------------
+// ================================================================
+// ------------------------ FONTS
+// ================================================================
 
 h1 {
     color: $green_bright_mint;
@@ -105,7 +111,9 @@ h2 {
     }
 }
 
-// --------------------------------------- TEXT ANCHORS ---------------------------------------
+// ================================================================
+// ------------------------ TEXT ANCHORS
+// ================================================================
 
 .anchor-center {
     text-align: center;
@@ -115,7 +123,9 @@ h2 {
     text-align: end;
 }
 
-// --------------------------------------- FLEXBOX ---------------------------------------
+// ================================================================
+// ------------------------ FLEXBOX
+// ================================================================
 
 .flex {
     display: flex;
@@ -129,7 +139,9 @@ h2 {
     flex-direction: column;
 }
 
-// --------------------------------------- ELEMENTS ---------------------------------------
+// ================================================================
+// ------------------------ ELEMENTS
+// ================================================================
 
 ul {
     list-style-type: none;
@@ -140,10 +152,13 @@ a {
 }
 
 #landing {
-    margin: 8vh 0 8vh 0;
+    container-type: inline-size;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 
     div {
-        container-type: inline-size;
+        
         h1 {
             font-size: 18cqw;
             margin: 0;
@@ -154,6 +169,11 @@ a {
             margin-top: 0;
         }
     }
+
+    span {
+        font-size: 32px;
+        font-weight: bold;
+    }
 }
 
 header {
@@ -161,8 +181,9 @@ header {
     min-height: 48px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 24px;
     z-index: 1001;
+    padding: 24px 0 24px 0;
+    // border-bottom: 1px solid $grey_light;
 
     > a {
         display: flex;
@@ -186,23 +207,34 @@ header {
                 a {
                     cursor: pointer;
                     display: inline-block;
-                    background-color: rgb(251, 251, 251, 0.08);
-                    color: $white;
                     padding: 16px 24px 16px 24px;
-                    margin-left: 1rem;
+                    margin-left: 16px;
                     border-radius: 4px;
+                    color: $white;
+                    font-size: 120%;
                     font-weight: bold;
                     transition: all 0.4s ease;
 
                     &:hover {
-                        background-color: $green_bright_mint;
-                        color: $black_desat;
+                        // box-shadow: 0px 0px 4px 4px rgb(61, 255, 135, 0.4);
+                        background-color: rgb(251, 251, 251, 0.08);
                         transition: all 0.4s ease;
                     }
 
                     &:active {
                         text-decoration: underline;
                         transition: all 0.4s ease;
+                    }
+
+                    &.highlight {
+                        color: $black_desat;
+                        background-color: $green_bright_mint;
+                        transition: all 0.4s ease;
+
+                        &:hover {
+                            background-color: rgb(61, 255, 135, 0.64);
+                            transition: all 0.4s ease;
+                        }
                     }
                 }
             }
@@ -294,9 +326,11 @@ footer {
     }
 }
 
-// --------------------------------------- MENU ---------------------------------------
+// ================================================================
+// ------------------------ MENU
+// ================================================================
 
-// ---------------- Desktop ----------------
+// -------- Desktop --------
 
 .desktop-nav {
     @media screen and (max-width: 980px) {
@@ -304,7 +338,7 @@ footer {
     }
 }
 
-// ---------------- Mobile ----------------
+// -------- Mobile --------
 
 .burger-btn {
     background: none;
@@ -390,4 +424,8 @@ footer {
     }
 }
 
-// --------------------------------------- OVERLAY ---------------------------------------
+// ================================================================
+// ------------------------ OVERLAY
+// ================================================================
+
+// Nothing here... For now

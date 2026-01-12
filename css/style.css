@@ -104,10 +104,10 @@ a {
 }
 
 #landing {
-  margin: 8vh 0 8vh 0;
-}
-#landing div {
   container-type: inline-size;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 #landing div h1 {
   font-size: 18cqw;
@@ -117,13 +117,17 @@ a {
   color: #FBFBFB;
   margin-top: 0;
 }
+#landing span {
+  font-size: 32px;
+  font-weight: bold;
+}
 
 header {
   min-height: 48px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
   z-index: 1001;
+  padding: 24px 0 24px 0;
 }
 header > a {
   display: flex;
@@ -143,21 +147,29 @@ header nav ul {
 header nav ul li a {
   cursor: pointer;
   display: inline-block;
-  background-color: rgba(251, 251, 251, 0.08);
-  color: #FBFBFB;
   padding: 16px 24px 16px 24px;
-  margin-left: 1rem;
+  margin-left: 16px;
   border-radius: 4px;
+  color: #FBFBFB;
+  font-size: 120%;
   font-weight: bold;
   transition: all 0.4s ease;
 }
 header nav ul li a:hover {
-  background-color: #3dff87;
-  color: #151b21;
+  background-color: rgba(251, 251, 251, 0.08);
   transition: all 0.4s ease;
 }
 header nav ul li a:active {
   text-decoration: underline;
+  transition: all 0.4s ease;
+}
+header nav ul li a.highlight {
+  color: #151b21;
+  background-color: #3dff87;
+  transition: all 0.4s ease;
+}
+header nav ul li a.highlight:hover {
+  background-color: rgba(61, 255, 135, 0.64);
   transition: all 0.4s ease;
 }
 

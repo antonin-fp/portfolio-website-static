@@ -8,6 +8,7 @@
 
     <link rel="icon" type="image/png" href="media/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,7 +26,7 @@
                 <li><a href="index.html#about">À propos</a></li>
                 <li><a href="index.html#skills">Compétences</a></li>
                 <li><a href="index.html#projects">Projets</a></li>
-                <li><a href="https://linktr.ee/antonin.thomas">Linktr.ee</a></li>
+                <li><a class="highlight" href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
         <button class="burger-btn" aria-label="Ouvrir le menu">
@@ -40,35 +41,35 @@
             <li><a class="nav-link" href="index.html#about">À propos</a></li>
             <li><a class="nav-link" href="index.html#skills">Compétences</a></li>
             <li><a class="nav-link" href="index.html#projects">Projets</a></li>
-            <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+            <li><a class="nav-link highlight" href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
     <main class="layout">
-        <div id="landing">
+        <div class="flex column" id="landing">
             <div>
                 <h1>PORTFOLIO</h1>
                 <h2 class="anchor-end">Antonin THOMAS</h2>
             </div>
-            <p>[Ce site est actuellement en construction, revenez plus tard !]</p>
+            <span>[↓]</span>
         </div>
 
-        <div id="about">
+        <div data-aos="fade-up" id="about">
             <h2>À propos de moi</h2>
             <p>[Cette section est en construction, revenez plus tard !]</p>
         </div>
 
-        <div id="skills">
+        <div data-aos="fade-up" id="skills">
             <h2>Mes compétences</h2>
             <p>[Cette section est en construction, revenez plus tard !]</p>
         </div>
 
-        <div id="projects">
+        <div data-aos="fade-up" id="projects">
             <h2>Mes projets</h2>
             <p>[Cette section est en construction, revenez plus tard !]</p>
         </div>
 
-        <div id="contact">
+        <div data-aos="fade-up" id="contact">
             <h2>Me contacter</h2>
             <p>[Cette section est en construction, revenez plus tard !]</p>
         </div>
@@ -105,6 +106,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
