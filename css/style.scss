@@ -8,7 +8,6 @@ $grey_dark: #333333;
 $grey: #666666;
 $grey_light: #999999;
 $white: #FBFBFB;
-
 $green_bright_mint: #3dff87;
 
 // ================================================================
@@ -109,7 +108,7 @@ h2 {
     }
 
     p {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -185,7 +184,6 @@ header {
     align-items: center;
     z-index: 1001;
     padding: 24px 0 24px 0;
-    // border-bottom: 1px solid $grey_light;
 
     >a {
         display: flex;
@@ -251,9 +249,8 @@ footer {
     border-top: 1px solid $grey_light;
 
     @media screen and (max-width: 767px) {
-        font-size: 12px;
+        font-size: 14px;
     }
-
 
     >div {
         width: 100%;
